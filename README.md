@@ -1,7 +1,6 @@
 # Portfolio Assignmnet
 
 * 'Basic-Portfolio' //
-* assets > css, images > styles.css, reset.css
 *  [reset.css](http://meyerweb.com/eric/tools/css/reset/reset.css)
 * [validate your html](https://validator.w3.org/#validate_by_input)
 * specifications  
