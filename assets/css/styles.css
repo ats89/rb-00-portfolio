@@ -1,7 +1,57 @@
+/* variables */
+:root {
+	--font-size-lg1: 32px;
+	--font-size-lg2: 24px;
+	--font-size-md: 18px;
+	--font-size-sm: 12px;
+	--nav-height: 80px;
+	--font-family-headings: Verdana, Geneva, Tahoma, sans-serif;
+	--font-family-content: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+	display: flex;
+  flex-direction: column;
+	background-image: url("../images/concrete_seamless.png");
+}
+
+.wrapper {
+  flex: 1 0 auto;
+}
+
+footer {
+	height: 50px;
+	background-color: red;
+	margin-top: 30px;
+  flex-shrink: 0;
+}
+
+h1 {
+	font-size: var(--font-size-lg1);
+}
+
+p {
+	font-size: var(--font-size-md);
+	line-height: 1.5;
+}
+
+.center {
+	display: flex;
+  justify-content: center;
+	align-items: center;
+}
+
+/* Navigation CSS */
 nav {
-	height: 80px;
+	height: var(--nav-height);
 	background-color: #fff;
+	font-family: var(--font-family-headings);
 	border-bottom: 2px solid #ccc;
+	margin-bottom: 30px;
 }
 
 .nav-container {
@@ -12,11 +62,10 @@ nav {
 
 .nav-left {
 	position: absolute;
-	height: 80px;
+	height: var(--nav-height);
 	box-sizing: border-box;
-	padding: 30px;
-	font-size: 30px;
-	font-family: 'Georgia', Times, Times New Roman, serif;
+	padding: 0 20px;
+	font-size: var(--font-size-lg1);
 	background-color: #4aaaa5;
 	color: #fff;
 }
@@ -24,9 +73,8 @@ nav {
 .nav-right {
 	position: absolute;
 	right: 0;
-	height: 80px;
-	font-size: 20px;
-	font-family: 'Georgia', Times, Times New Roman, serif;
+	height: var(--nav-height);
+	font-size: var(--font-size-lg2);
 	color: #ccc;
 }
 
@@ -43,8 +91,42 @@ nav {
 	color: #4aaaa5;
 }
 
-.center {
-	display: flex;
-  justify-content: center;
-	align-items: center;
+/* Main Section CSS */
+main {
+	padding: 20px;
+	width: 960px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	position: relative;
+	background-color: white;
 }
+
+main header {
+	font-family: var(--font-family-headings);
+	margin-bottom: 20px;
+}
+
+main hr {
+	margin-bottom: 20px;
+}
+
+main section {
+	min-height: 200px;
+	font-family: var(--font-family-content);
+}
+
+main section p {
+	margin-bottom: 15px;
+}
+
+#profile-picture {
+	float: left;
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+	object-position: 0% 15%;
+	border-radius: 5px;
+	margin: 0 20px 15px 0;
+}
+
+
