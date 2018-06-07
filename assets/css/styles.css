@@ -4,9 +4,16 @@
 	--font-size-lg2: 24px;
 	--font-size-md: 18px;
 	--font-size-sm: 12px;
-	--nav-height: 80px;
 	--font-family-headings: Verdana, Geneva, Tahoma, sans-serif;
 	--font-family-content: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	--nav-height: 80px;
+	--nav-bg-color: #fff;
+	--nav-border-color: #ccc;
+	--nav-border-shadow-color: #fafba5;
+	--nav-left-bg-color: #1e3e76;
+	--nav-left-font-color: #fff;
+	--nav-right-font-color: #b7b7b7;
+	--footer-bg-color: #666;
 }
 
 html, body {
@@ -24,10 +31,12 @@ body {
 }
 
 footer {
+	flex-shrink: 0;
 	height: 50px;
-	background-color: red;
+	background-color: var(--footer-bg-color);
 	margin-top: 30px;
-  flex-shrink: 0;
+	border-top: 2px solid var(--nav-border-color);
+	box-shadow: 1px -1px 2px 2px var(--nav-border-shadow-color);
 }
 
 h1 {
@@ -48,9 +57,10 @@ p {
 /* Navigation CSS */
 nav {
 	height: var(--nav-height);
-	background-color: #fff;
+	background-color: var(--nav-bg-color);
 	font-family: var(--font-family-headings);
-	border-bottom: 2px solid #ccc;
+	border-bottom: 2px solid var(--nav-border-color);
+	box-shadow: 1px 1px 2px 2px var(--nav-border-shadow-color);
 	margin-bottom: 30px;
 }
 
@@ -66,8 +76,8 @@ nav {
 	box-sizing: border-box;
 	padding: 0 20px;
 	font-size: var(--font-size-lg1);
-	background-color: #4aaaa5;
-	color: #fff;
+	background-color: var(--nav-left-bg-color);
+	color: var(--nav-left-font-color);
 }
 
 .nav-right {
@@ -75,7 +85,7 @@ nav {
 	right: 0;
 	height: var(--nav-height);
 	font-size: var(--font-size-lg2);
-	color: #ccc;
+	color: var(--nav-right-font-color);
 }
 
 .nav-right span {
@@ -83,12 +93,12 @@ nav {
 }
 
 .nav-right a {
-	color: #ccc;
+	color: var(--nav-right-font-color);
 	text-decoration: none;
 }
 
 .nav-right a:hover {
-	color: #4aaaa5;
+	color: var(--nav-left-bg-color);
 }
 
 /* Main Section CSS */
@@ -104,10 +114,12 @@ main {
 main header {
 	font-family: var(--font-family-headings);
 	margin-bottom: 20px;
+	color: var(--nav-left-bg-color);
 }
 
 main hr {
 	margin-bottom: 20px;
+	border-color: var(--nav-left-bg-color);
 }
 
 main section {
