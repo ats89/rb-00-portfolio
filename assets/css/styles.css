@@ -7,13 +7,13 @@
 	--font-family-headings: Verdana, Geneva, Tahoma, sans-serif;
 	--font-family-content: Arial, 'Helvetica Neue', Helvetica, sans-serif;
 	--nav-height: 80px;
+	--footer-height: 50px;
+	--dark-bg-color: #1e3e76;
+	--light-font-color: #fff;
+	--light-border-shadow-color: #fafba5;
 	--nav-bg-color: #fff;
 	--nav-border-color: #ccc;
-	--nav-border-shadow-color: #fafba5;
-	--nav-left-bg-color: #1e3e76;
-	--nav-left-font-color: #fff;
 	--nav-right-font-color: #b7b7b7;
-	--footer-height: 50px;
 	--footer-bg-color: #666;
 }
 
@@ -52,7 +52,7 @@ nav {
 	background-color: var(--nav-bg-color);
 	font-family: var(--font-family-headings);
 	border-bottom: 2px solid var(--nav-border-color);
-	box-shadow: 1px 1px 2px 2px var(--nav-border-shadow-color);
+	box-shadow: 1px 1px 2px 2px var(--light-border-shadow-color);
 	margin-bottom: 30px;
 }
 
@@ -68,8 +68,8 @@ nav {
 	box-sizing: border-box;
 	padding: 0 20px;
 	font-size: var(--font-size-lg1);
-	background-color: var(--nav-left-bg-color);
-	color: var(--nav-left-font-color);
+	background-color: var(--dark-bg-color);
+	color: var(--light-font-color);
 }
 
 .nav-right {
@@ -90,7 +90,7 @@ nav {
 }
 
 .nav-right a:hover {
-	color: var(--nav-left-bg-color);
+	color: var(--dark-bg-color);
 }
 
 /* Main Section CSS */
@@ -106,12 +106,12 @@ main {
 main header {
 	font-family: var(--font-family-headings);
 	margin-bottom: 20px;
-	color: var(--nav-left-bg-color);
+	color: var(--dark-bg-color);
 }
 
 main hr {
 	margin-bottom: 20px;
-	border-color: var(--nav-left-bg-color);
+	border-color: var(--dark-bg-color);
 }
 
 main section {
@@ -141,7 +141,7 @@ footer {
 	color: var(--nav-bg-color);
 	margin-top: 30px;
 	border-top: 2px solid var(--nav-border-color);
-	box-shadow: 1px -1px 2px 2px var(--nav-border-shadow-color);
+	box-shadow: 1px -1px 2px 2px var(--light-border-shadow-color);
 }
 
 .footer-content-container {
@@ -177,7 +177,7 @@ input, textarea {
 }
 
 input:focus, textarea:focus {
-	background-color: var(--nav-border-shadow-color);
+	background-color: var(--light-border-shadow-color);
 }
 
 button {
@@ -185,6 +185,49 @@ button {
 	font-size: var(--font-size-md);
 	padding: 8px 5px;
 	border-radius: 5px;
-	color: var(--nav-left-font-color);
-	background-color: var(--nav-left-bg-color);
+	color: var(--light-font-color);
+	background-color: var(--dark-bg-color);
+}
+
+/* Portfolio Page CSS */
+.portfolio-section {
+	font-size: var(--font-size-md);
+	overflow: auto;
+}
+
+.portfolio-item-container {
+	display: block;
+	float: left;
+	width: 33.33%;
+	height: 200px;
+	padding: 0 20px 20px 0;
+	box-sizing: border-box;
+}
+
+.portfolio-item {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: aliceblue;
+	border-radius: 5px;
+}
+
+.portfolio-item img {
+	width: 100%;
+	height: 180px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.portfolio-item p {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 40px;
+	background-color: var(--dark-bg-color);
+	color: var(--light-font-color);
+	box-sizing: border-box;
+	box-shadow: 
+		inset 0px 11px 8px -11px var(--light-border-shadow-color),
+		inset 0px -11px 8px -11px var(--light-border-shadow-color);
 }
