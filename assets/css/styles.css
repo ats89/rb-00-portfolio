@@ -13,6 +13,7 @@
 	--nav-left-bg-color: #1e3e76;
 	--nav-left-font-color: #fff;
 	--nav-right-font-color: #b7b7b7;
+	--footer-height: 50px;
 	--footer-bg-color: #666;
 }
 
@@ -30,13 +31,10 @@ body {
   flex: 1 0 auto;
 }
 
-footer {
-	flex-shrink: 0;
-	height: 50px;
-	background-color: var(--footer-bg-color);
-	margin-top: 30px;
-	border-top: 2px solid var(--nav-border-color);
-	box-shadow: 1px -1px 2px 2px var(--nav-border-shadow-color);
+.center {
+	display: flex;
+  justify-content: center;
+	align-items: center;
 }
 
 h1 {
@@ -46,12 +44,6 @@ h1 {
 p {
 	font-size: var(--font-size-md);
 	line-height: 1.5;
-}
-
-.center {
-	display: flex;
-  justify-content: center;
-	align-items: center;
 }
 
 /* Navigation CSS */
@@ -64,7 +56,7 @@ nav {
 	margin-bottom: 30px;
 }
 
-.nav-container {
+.nav-content-container {
 	width: 960px;
 	margin: 0 auto;
 	position: relative;
@@ -141,4 +133,26 @@ main section p {
 	margin: 0 20px 15px 0;
 }
 
+/* Footer CSS */
+footer {
+	flex-shrink: 0;
+	height: var(--footer-height);
+	background-color: var(--footer-bg-color);
+	color: var(--nav-bg-color);
+	margin-top: 30px;
+	border-top: 2px solid var(--nav-border-color);
+	box-shadow: 1px -1px 2px 2px var(--nav-border-shadow-color);
+}
 
+.footer-content-container {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.footer-content-container div {
+	position: absolute;
+	height: var(--footer-height);
+	font-size: var(--font-size-sm);
+	font-family: var(--font-family-content);
+}
